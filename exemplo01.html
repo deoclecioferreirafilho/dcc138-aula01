@@ -11,11 +11,13 @@
 
     <script>
         var canvas = document.querySelector("canvas");
+        canvas.width = 600;
+        canvas.height = 300;
         var ctx = canvas.getContext("2d");
         
         ctx.fillStyle = "blue";
-        ctx.fillRect(0,0,600,300)
-        
+        ctx.fillRect(0,0,canvas.width,canvas.height)
+
         ctx.strokeStyle = "red";
         ctx.lineWidth = 14;
         ctx.strokeRect(100,20,170,50);

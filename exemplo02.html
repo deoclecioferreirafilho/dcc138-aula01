@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo02</title>
+</head>
+<body>
+    <h1>Exemplo 02</h1>
+    <canvas width = "600" height="300"> Seu browser kaducou</canvas>
+
+    <script>
+        var canvas = document.querySelector("canvas");
+        canvas.width = 600;
+        canvas.height = 300;
+        var ctx = canvas.getContext("2d");
+        
+        preencheRetangulo(0,0,canvas.width,canvas.height, "white");
+
+        for(var i = 100; )
+
+        contornaRetangulo(100,20,170,50, "red", 14);
+ 
+        preencheRetangulo(100,20,170,50, "gold");
+
+        escreveTexto("Hello word!", 100, 50, "black","bold 30px Arial" );
+
+
+        function preencheRetangulo(x,y,w,h, cor){
+
+            ctx.fillStyle = cor;
+            ctx.fillRect(x,y,w,h);
+
+        }
+
+        function contornaRetangulo(x,y,w,h, cor, linha){
+
+        ctx.strokeRect(x, y, w, h);
+        ctx.strokeStyle = cor;
+        ctx.lineWidth = linha;
+        }
+        
+        function escreveTexto(texto, x, y, cor, fonte){
+
+        ctx.font = fonte;
+        ctx.fillStyle = cor;
+        ctx.fillText(texto, x, y);
+        }
+
+
+    </script>
+</body>
+</html>
