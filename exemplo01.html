@@ -12,6 +12,20 @@
     <script>
         var canvas = document.querySelector("canvas");
         var ctx = canvas.getContext("2d");
+        
+        ctx.fillStyle = "blue";
+        ctx.fillRect(0,0,600,300)
+        
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = 14;
+        ctx.strokeRect(100,20,170,50);
+
+        ctx.fillStyle = "gold";
+        ctx.fillRect(100,20,170,50);
+
+        
+        ctx.font = "bold 30px Arial";
+        ctx.fillStyle = "black";
         ctx.fillText("Hello word!", 100, 50);
     
     </script>
